@@ -1,7 +1,7 @@
-# Sistema de Cadastro de Pessoas - versao 2
-# novos requisitos: menu, consulta, alteracao e listagem
+"""Programa para cadastro de pessoas. Uso didático na disciplina de GQS"""
 
 def exibir_menu():
+    """Módulo para exibição do menu em todo o programa"""
     print("=========================")
     print(" CADASTRO DE PESSOAS")
     print("=========================")
@@ -12,8 +12,9 @@ def exibir_menu():
     print("5 - Avalisar cadastro")
     print("6 - Sair")
     return int(input("Escolha uma opcao: "))
- 
+
 def cadastrar_pessoa(nomes, idades, emails):
+    """Módulo para cadastro de pessoas. Recebe 3 listas e modifica o conteúdo"""
     nome = input("Informe o nome: ")
     nomes.append(nome)
     idade = int(input("Informe a idade: "))
@@ -33,7 +34,7 @@ def exibir_pessoa(nomes, idades, emails, pos):
         print("Situacao: Maior de idade")
     else:
         print("Situacao: Menor de idade")
- 
+
 def buscar_pessoa(nomes, nome_procurado):
     pos = 0
     while pos < len(nomes):
@@ -118,10 +119,10 @@ def analisar_pessoa(nomes, idades, emails):
 nomes = []
 idades = []
 emails = []
- 
+
 qtd = 0
 op = 0
- 
+
 while op != 6:
     #print("=========================")
     #print(" CADASTRO DE PESSOAS")
