@@ -44,6 +44,7 @@ def buscar_pessoa(nomes, nome_procurado):
     return -1
 
 def consultar_pessoa(nomes, idades, emails):
+    """Modulo para consultar pessoa"""
     procurado = input("Nome para consultar: ")
     pos = buscar_pessoa(nomes, procurado)
     if pos == -1:
