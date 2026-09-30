@@ -141,26 +141,31 @@ def analisar_pessoa(cadastro):
         )
 
 
-cadastro = CadastroPessoas()
+def executar():
+    """Executa o menu principal da aplicação."""
+    cadastro = CadastroPessoas()
+    op = 0
 
-op = 0
+    while op != 6:
+        op = exibir_menu()
 
-while op != 6:
-    op = exibir_menu()
+        if op == 1:
+            cadastrar_pessoa(cadastro)
+        elif op == 2:
+            consultar_pessoa(cadastro)
+        elif op == 3:
+            alterar_pessoa(cadastro)
+        elif op == 4:
+            listar_pessoas(cadastro)
+        elif op == 5:
+            analisar_pessoa(cadastro)
+        elif op == 6:
+            print("Saindo...")
+        else:
+            print("Opcao invalida")
 
-    if op == 1:
-        cadastrar_pessoa(cadastro)
-    elif op == 2:
-        consultar_pessoa(cadastro)
-    elif op == 3:
-        alterar_pessoa(cadastro)
-    elif op == 4:
-        listar_pessoas(cadastro)
-    elif op == 5:
-        analisar_pessoa(cadastro)
-    elif op == 6:
-        print("Saindo...")
-    else:
-        print("Opcao invalida")
+    print("Fim do programa")
 
-print("Fim do programa")
+
+if __name__ == "__main__":
+    executar()
